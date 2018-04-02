@@ -25,7 +25,7 @@
     notify: restart httpd
 
   - name: NTPインストール
-    yum: name=ntpd state=latest
+    yum: name=ntp state=latest
 
   - name: タイムゾーンの設定
     ini_file: >
