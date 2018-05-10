@@ -24,8 +24,6 @@
       - php-mysql
     notify: restart httpd
 
-  - name: NTPインストール
-    yum: name=ntp state=latest
 
   - name: タイムゾーンの設定
     ini_file: >
