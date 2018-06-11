@@ -13,11 +13,11 @@ describe port(80) do
   it { should be_listening }
 end
 
-describe package('ntp') do
+describe package('ntpd') do
   it { should be_installed }
 end
 
-describe service('ntp') do
+describe service('ntpd') do
   it { should be_enabled }
   it { should be_running }
 end
