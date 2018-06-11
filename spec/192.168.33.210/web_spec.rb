@@ -13,7 +13,7 @@ describe port(80) do
   it { should be_listening }
 end
 
-describe package('ntpd') do
+describe package('ntp') do
   it { should be_installed }
 end
 
