@@ -24,11 +24,6 @@
       - php-mysql
     notify: restart httpd
 
-  - name: NTPインストール
-    yum: name=ntp state=latest
-
-  - name: NTPサービス起動
-    service: name=ntpd state=started enabled=yes
 
   - name: タイムゾーンの設定
     ini_file: >
@@ -52,7 +47,7 @@
   - name: wordpressの所有権をapacheに変更
     file: path=/var/www/html/wordpress/ owner=apache group=apache recurse=yes
 
-  - name: サービスの起動
+  - name: httpサービスの起動
     service: name=httpd state=restarted
 
   handlers:
